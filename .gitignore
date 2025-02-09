@@ -1,3 +1,12 @@
 node_modules/
+backend/node_modules/
+
 .env
+backend/.env
+
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
 dataflow-csc-key.json
+backend/dataflow-csc-key.json
