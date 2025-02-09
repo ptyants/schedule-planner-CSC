@@ -56,7 +56,7 @@ app.post("/submit", async (req, res) => {
         const values = [[mssv, JSON.stringify(scheduleData), new Date().toISOString()]];
         await sheets.spreadsheets.values.append({
             spreadsheetId: SPREADSHEET_ID,
-            range: "Sheet1!A:C",
+            range: "Data1!A:C",
             valueInputOption: "RAW",
             resource: { values }
         });
