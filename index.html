@@ -78,7 +78,8 @@
             const response = await fetch("https://schedule-planner-csc.vercel.app/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
+                body: JSON.stringify(data),
+                mode: "cors"  // Đảm bảo CORS được bật
             });
 
             const result = await response.json();

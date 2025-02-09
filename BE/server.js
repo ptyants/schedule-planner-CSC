@@ -24,7 +24,8 @@ const scheduleSchema = new mongoose.Schema({
 const Schedule = mongoose.model("Schedule", scheduleSchema);
 
 // Middleware
-app.use(cors());
+const cors = require("cors");
+app.use(cors({ origin: "https://ptyants.github.io" }));
 app.use(express.json());
 
 // Google Sheets API
