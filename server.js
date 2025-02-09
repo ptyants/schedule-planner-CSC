@@ -28,8 +28,10 @@ app.use(cors());
 app.use(express.json());
 
 // Google Sheets API
+const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+
 const auth = new google.auth.GoogleAuth({
-    keyFile: "dataflow-csc-key.json",  // File JSON API Key
+    credentials: serviceAccount,
     scopes: ["https://www.googleapis.com/auth/spreadsheets"]
 });
 const sheets = google.sheets({ version: "v4", auth });
