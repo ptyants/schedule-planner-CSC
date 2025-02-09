@@ -28,7 +28,7 @@ app.use(cors());
 app.use(express.json());
 
 // Google Sheets API
-const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+const serviceAccount = JSON.parse(Buffer.from(process.env.GOOGLE_SERVICE_ACCOUNT_JSON, 'base64').toString('utf-8'));
 
 const auth = new google.auth.GoogleAuth({
     credentials: serviceAccount,
