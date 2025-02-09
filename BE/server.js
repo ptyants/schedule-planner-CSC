@@ -79,6 +79,11 @@ app.get("/schedules", async (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.json({ message: "🚀 Backend API hoạt động thành công trên Vercel!" });
+});
+
+
 // Chạy server
 app.listen(PORT, () => {
     console.log(`🚀 Server chạy tại http://localhost:${PORT}`);
